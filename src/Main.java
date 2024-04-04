@@ -41,8 +41,10 @@ public class Main {
                     delete();
                     break;
                 case "P":
+                    printItem();
                     break;
                 case "Q":
+                    quit();
                     break;
             }
             System.out.println();
@@ -85,13 +87,15 @@ public class Main {
         list.remove(deleteItem);
     }
 
-    private static void print()
+    private static void printItem()
     {
-
+        displayList();
     }
 
     private static void quit()
     {
+        boolean quitting = false;
 
+        quitting = SafeInput.getYNConfirm(in, "Are you sure you want to quit?");
     }
 }
