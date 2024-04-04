@@ -97,5 +97,14 @@ public class Main {
         boolean quitting = false;
 
         quitting = SafeInput.getYNConfirm(in, "Are you sure you want to quit?");
+
+        if(quitting)
+        {
+            System.exit(0);
+        }
+        else
+        {
+            quitting = false;
+        }
     }
 }
