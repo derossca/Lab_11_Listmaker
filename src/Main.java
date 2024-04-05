@@ -105,26 +105,23 @@ public class Main {
         displayList();
     }
 
-    //made this a boolean to work with the switch case Q and do while loop for entire program
-    private static boolean quit()
-    {
-        boolean quitting = false;
 
-        //prompts user to see if they are sure they want to quit Yy or Nn
+    private static void quit()
+    {
+        //declaring boolean needed
+         boolean quitting = false;
+
+         //prompting user and getting input by calling method getYNConfirm
         quitting = SafeInput.getYNConfirm(in, "Are you sure you want to quit?");
 
-        //If else structure that returns true and will end program in main method
-        //should user choose Yy
+        //if else structure so that if quitting is Yy then the system exits and program stops
         if(quitting)
         {
-            quitting = true;
+            System.exit(0);
         }
-        //else the boolean quitting is false and program continues on
-        else
+        else //else quitting is false and program keeps going
         {
             quitting = false;
         }
-        //return result of quitting from if else structure
-        return quitting;
     }
 }
