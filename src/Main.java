@@ -50,8 +50,7 @@ public class Main {
                     break;
             }
             System.out.println();
-        }
-        while (quit() != true);
+        } while (!done);
         //quit set to false unless user input in method below is Yy
         //program only quits when condition is met in helper method quit() below
     }
