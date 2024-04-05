@@ -49,7 +49,7 @@ public class Main {
             }
             System.out.println();
         }
-        while (!done);
+        while (quit() != true);
 
     }
 
@@ -83,6 +83,7 @@ public class Main {
         int deleteItem = 0;
 
         deleteItem = SafeInput.getRangedInt(in, "Select the number of the item to delete ", 1, 100);
+        deleteItem = deleteItem - 1;
 
         list.remove(deleteItem);
     }
@@ -92,7 +93,7 @@ public class Main {
         displayList();
     }
 
-    private static void quit()
+    private static boolean quit()
     {
         boolean quitting = false;
 
@@ -100,11 +101,12 @@ public class Main {
 
         if(quitting)
         {
-            System.exit(0);
+            quitting = true;
         }
         else
         {
             quitting = false;
         }
+        return quitting;
     }
 }
